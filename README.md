@@ -1,6 +1,6 @@
 # hotdog
 Code Day challenge by Dynamit. Turned a photoshop mockup into a web page loosely based on Columbus' best hot dogs.
-
+[vineetakandala.github.io/hotdog/] (https://vineetakandala.github.io/hotdog/)
 
 # Technologies used
 
