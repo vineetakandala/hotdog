@@ -1,0 +1,12 @@
+// Small devices
+@media only screen and (max-width: 768px) {
+//    Navigation
+    nav {
+        .main-nav{
+            li{
+                margin: auto 15px;
+                font-size: 90%;
+            }
+        }
+    }
+}

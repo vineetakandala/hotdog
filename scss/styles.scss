@@ -1,0 +1,366 @@
+@import 'defaultVal';
+
+/* -------------------------------------------------*/
+/*BASIC SETUP*/
+/* -------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: $body-background;
+    color: $content-text;
+    font-family: $font-stack;
+    font-weight: 300;
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix{zoom: 1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* -------------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/* -------------------------------------------------*/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0px;
+}
+
+.box {
+    padding: 1%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/* ------HEADINGS--------*/
+h1 {    
+    font-weight: 300;
+    font-size: 250%;
+    word-spacing: 4px;
+    letter-spacing: 1px;    
+    margin: 10px;
+}
+
+h2 {
+    font-size: 133%;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2:before {    
+    content: " ";
+    background-color: $blue-gray;
+    height: 2px;
+    width: 1em;
+    position: absolute;
+    top: 12px;
+    left: -30px;
+}
+
+h3 {
+    font-size: 111%;
+    font-weight: 600;
+}
+
+/* ------BUTTONS--------*/
+.btn {
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 1.2em 2em;
+    border: none;
+}
+
+
+/* -------------------------------------------------*/
+/*PHOTO GRID*/
+/* -------------------------------------------------*/
+.section-photo-grid {
+    padding: 0;
+    position: relative;
+    
+        .hotdog-photo::after {
+            content:'';
+            position:absolute;
+            top:0;
+            left:0; 
+            width:100%; 
+            height:100%;
+            display:inline-block;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.05)), to(rgba(1, 1, 1, 0)));
+            background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(1, 1, 1, 0));
+        }
+    
+    .hotdog-showcase {
+        list-style: none;
+        width: 100%;
+        
+
+        li {
+            display: block;
+            float: left;
+            width: 16.6666%;
+        }  
+        
+        .hotdog-photo {
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+            
+            img {
+                opacity: 1;
+                width: 100%;
+                height: auto;
+                -webkit-transform: scale(1.15);
+                transform: scale(1.15);
+            }
+        }
+    } 
+    
+    .instagram-tag {        
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        
+        a {
+            font-family: $font-special;
+            font-size: 16px;
+            color: #fff;   
+            text-decoration: none;
+            
+            img {
+                margin-right: 5px;
+            }
+        }
+        a:link,
+        a:visited {
+            color: #fff;
+        }
+        a:hover,
+        a:active {
+            cursor: pointer;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+            -webkit-transition: border-bottom 0.2s;
+            transition: border-bottom 0.2s;
+        }
+    } 
+}
+
+/* -------------------------------------------------*/
+/*HEADER*/
+/* -------------------------------------------------*/
+
+nav {
+    
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px 3px #efefef;
+    box-shadow: 0 3px 3px #efefef;
+    
+    .main-nav {
+        list-style: none;
+        padding: 20px;
+        text-align: center;
+        
+        li {
+            display: inline-block;
+            margin: auto 30px;
+            
+            a:link,
+            a:visited {
+                color: $menu-text;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            
+            a:hover,
+            a:active {
+                color: $blue;
+                -webkit-transition: color 0.2s;
+                transition: color 0.2s;
+            }
+        }
+    }
+    
+    /*Mobile Navigation*/
+    .mobile-nav-icon {
+        float:right;
+        cursor: pointer;
+        display: none;
+        margin-right: 20px;
+    }
+
+    .mobile-nav-icon i {
+        font-size: 200%;
+        color: $menu-text;
+    }
+    
+    .nav-header {
+        display: none;
+        color: $menu-text;
+        text-align: left;
+        padding: 10px;
+    }
+}
+
+/*Sticky Nav*/
+.sticky {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px 3px #efefef;
+    box-shadow: 0 3px 3px #efefef;
+    z-index: 9999;
+}
+
+/* -------------------------------------------------*/
+/*INTRO*/
+/* -------------------------------------------------*/
+.section-intro {
+    padding: 50px auto;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    
+    img {
+        height: 80px;
+    }
+    
+    .btn-dog {
+        background-color: $blue;
+        margin: 50px auto;
+        cursor: pointer;
+    }
+}
+
+
+/* -------------------------------------------------*/
+/*OPTIONS*/
+/* -------------------------------------------------*/
+.section-options {
+    background-color: #fff;
+    padding: 0;
+    
+    %option {
+        height: 400px;
+        width: 100%;
+    }
+    
+    .option-image {
+        height: 100%;
+        width: 50%;
+        margin-left: 50%;
+    }
+    
+    %option-content {                  
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin-left: 10%;
+        width: 30%;
+    }
+    
+    .all-beef,
+    .vegan,
+    .vegetarian {    
+        @extend %option;
+        position: relative;        
+    }
+    
+    .all-beef {       
+        .content-all-beef { 
+            h2:before {
+                background-color: $blue;
+            }
+            @extend %option-content;
+        }
+    }
+    
+    .vegan {
+        img {
+            margin-left: 0;
+        }
+        .content-vegan {
+            @extend %option-content;  
+            margin-left: 60%;
+        }
+    }
+    
+    .vegetarian {
+        .content-vegetarian {
+            @extend %option-content;
+        }
+    }
+}
+
+
+/* -------------------------------------------------*/
+/*FOOTER*/
+/* -------------------------------------------------*/
+footer {
+    width: 100%;
+    background-color: $footer-background;
+    font-size: 80%;
+    font-weight: 400;
+    
+    .copy {
+        float: left;
+        padding: 20px;
+        width: 50%;
+    }
+    
+    .contact {
+        float: right;
+        padding: 20px;
+        width: 50%;
+        text-align: right;
+    }
+    
+}
+
+/* -------------------------------------------------*/
+/*SCREEN READER ONLY*/
+/* -------------------------------------------------*/
+
+.skip {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    text-align: left;
+    overflow: hidden;
+}
+
+a.skip:active, 
+a.skip:focus, 
+a.skip:hover {
+    left: 0; 
+    top: 0;
+    width: auto; 
+    height: auto; 
+    overflow: visible; 
+}

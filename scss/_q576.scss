@@ -1,0 +1,105 @@
+// Extra small devices
+@media only screen and (max-width: 576px) { 
+    
+    //Mobile Navigation
+    nav {
+        .main-nav {
+            display: none;
+        }
+        
+        .main-nav-active {
+            display: block;
+            background-color: $blue-gray;
+            li {
+                display: block;
+                text-align: left;
+                margin-bottom: 10px;                
+                
+                a:hover,
+                a:visited {
+                    color: #fff;
+                }
+            }
+        }
+        
+        .mobile-nav-icon,
+        .nav-header {
+            display: inline-block;
+        }        
+    }  
+    
+    //Intro
+    .section-intro {
+        h1 {
+            font-size: 200%;
+        }
+        
+        .btn-dog {
+            margin: 30px auto;
+        }
+    }
+    
+    //Options
+    .section-options {
+        
+        h2 {
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        %option {
+            height: auto;
+            width: 100%;
+        }
+        
+        .option-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin-left: 0;
+        }
+        
+        %option-content {
+            position:static;
+            margin: auto;
+            padding-bottom: 40px;
+            width: 70%;
+            transform: none;
+        }
+        
+        .all-beef,
+        .vegan,
+        .vegetarian {    
+            @extend %option;
+            position: static;        
+        }
+        
+        .all-beef {       
+            .content-all-beef { 
+                @extend %option-content;
+            }
+        }
+
+        .vegan {
+            .content-vegan {
+                @extend %option-content;
+            }
+        }
+
+        .vegetarian {
+            .content-vegetarian {
+                @extend %option-content;
+            }
+        }        
+    }
+    
+    //Footer
+    footer {
+        .copy,
+        .contact {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
