@@ -6,15 +6,14 @@
   nav .main-nav {
     display: none; }
   nav .main-nav-active {
-    display: block;
-    background-color: #84959c; }
+    display: block; }
     nav .main-nav-active li {
       display: block;
       text-align: left;
       margin-bottom: 10px; }
       nav .main-nav-active li a:hover,
       nav .main-nav-active li a:visited {
-        color: #fff; }
+        color: #286782; }
   nav .mobile-nav-icon,
   nav .nav-header {
     display: inline-block; }
@@ -42,6 +41,7 @@
     margin: auto;
     padding-bottom: 40px;
     width: 70%;
+    -webkit-transform: none;
     transform: none; }
   .section-options .all-beef,
   .section-options .vegan,
@@ -53,5 +53,3 @@
     float: none;
     width: 100%;
     text-align: center; } }
-
-/*# sourceMappingURL=queries.css.map */
