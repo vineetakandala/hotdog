@@ -1,6 +1,6 @@
 # hotdog
 Code Day challenge by Dynamit. Turned a photoshop mockup into a web page loosely based on Columbus' best hot dogs.
----
+
 
 # Technologies used
 
@@ -11,7 +11,7 @@ Code Day challenge by Dynamit. Turned a photoshop mockup into a web page loosely
   - for sticky navigation and mobile navigation
 - waypoints.js
   - for smooth scrolling
----
+
 
 # Features
 
